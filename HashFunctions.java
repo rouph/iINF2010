@@ -8,7 +8,7 @@ public class HashFunctions
    public static void main(String[] args) 
    {
       // Donnees brutes
-      Integer[] array = { 100,  75,  64,  25,  36, 101,  11,  92,  
+      Integer[] array = { 100,  75,  64,  25,  36, 101,  11,  92,
                      200, 175, 164, 125, 136, 201, 111, 192,
                      300, 275, 264, 225, 236, 301, 311, 292};
       
@@ -105,7 +105,14 @@ public class HashFunctions
     */
    public static ArrayList<Integer> randomIntegers(int length)
    {
-      return null;
+      Random generator = new Random( System.nanoTime() );
+      ArrayList<Integer> result = new ArrayList<Integer>();
+      while( result.size() < length){
+         int i=generator.nextInt(p);
+         if(!result.contains(i))
+            result.add(i);
+      }
+      return result;
    }
 }
 

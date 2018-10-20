@@ -37,7 +37,6 @@ public class QuadraticSpacePerfectHashing<AnyType>
 
 	public boolean containsValue(AnyType x )
 	{
-
 		if(Size() == 0)
 		{
 			return false;
@@ -75,23 +74,33 @@ public class QuadraticSpacePerfectHashing<AnyType>
 			items[0] = array.get(0);
 			return;
 		}
-		a = generator.nextInt(p);
-		b = generator.nextInt(p);
-		items = (AnyType[]) new Object[ array.size() * array.size() ];
-
-		for (int i = 0; i < array.size(); i++) {
-			items[getKey(array.get(i))] = array.get(i);
-		}
+		boolean collision = false;
+		do{
+			collision = false;
+			a = generator.nextInt(p - 1) + 1;
+			b = generator.nextInt(p);
+			items = (AnyType[]) new Object[ array.size() * array.size() ];
+			for (AnyType element : array) {
+				if (!containsKey(getKey(element))) {
+					items[getKey(element)] = element;
+				} else {
+					collision = true;
+				}
+			}
+		}while(collision);
+		/* Si une collision a ete detecte on regenere
+		 les a et b et on recommence le processus de dispersement*/
 		return;
 	}
 
 	public String toString () {
-		String result = "";
+		StringBuilder result = new StringBuilder();
 		for (int i = 0; i < items.length; i++) {
 			if (items[i] != null)
-			result += "j=" + i + "( "  + items[i] + ", " + getKey(items[i]) + ") ";
+				result.append( "( "  + getKey(items[i]) + ", " + items[i] + "), ");
 		}
-		return result; 
+		result.setCharAt(result.length()- 2, '.');
+		return result.toString();
 	}
 
 	public void makeEmpty () {

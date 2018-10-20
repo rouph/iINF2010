@@ -27,29 +27,27 @@ public class LinearSpacePerfectHashing<AnyType>
 	private void AllocateMemory(ArrayList<AnyType> array)
 	{
 		Random generator = new Random( System.nanoTime() );
-
 		if(array == null || array.size() == 0)
 		{
 			data = null;
 			return;
 		}
+		data =  new QuadraticSpacePerfectHashing[array.size()];
 		if(array.size() == 1)
 		{
 			a = b = 0;
-			data =  new QuadraticSpacePerfectHashing[array.size()];
 			data[0] = new QuadraticSpacePerfectHashing(array);
 			return;
 		}
-		a = generator.nextInt(p);
+		a = generator.nextInt(p - 1) + 1;
 		b = generator.nextInt(p);
-		data =  new QuadraticSpacePerfectHashing[array.size()];
 		ArrayList<AnyType>[] temp = new ArrayList[array.size()];
-		for(int i = 0; i < array.size(); i++)
+		for(AnyType element : array)
 		{
-			AnyType element = array.get(i);
-			if (temp[getKey(element)] == null)
-				temp[getKey(element)] = new ArrayList<>();
-			temp[getKey(array.get(i))].add(element);
+			int key = getKey(element);
+			if (temp[key] == null)
+				temp[key] = new ArrayList<>();
+			temp[key].add(element);
 		}
 		for(int i = 0; i < array.size(); i++)
 		{
@@ -92,24 +90,27 @@ public class LinearSpacePerfectHashing<AnyType>
 	}
 	
 	public void remove (AnyType x) {
-		// A completer
-		
+		if(data[getKey(x)] != null)
+			data[getKey(x)].remove(x);
 	}
 
 	public String toString () {
-		String result = "";
+		 StringBuilder result = new StringBuilder();
 		
 	for(int i = 0 ; i < data.length; i++) {
-		if(data[i] != null)
-		result += i + " / " + data[i].toString() + "---";
+		if(data[i] != null) {
+			result.append("[" + i + "]->" + data[i].toString());
+			result.append(System.getProperty("line.separator"));
+		}
 	}
-		return result;
+		return result.toString();
 	}
 
 	public void makeEmpty () {
 		for(int i = 0; i < data.length; i++)
 		{
-			data[i] =null;
+			data[i].makeEmpty();
+			data[i] =	null;
 		}
    	}
 	
