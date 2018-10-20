@@ -99,7 +99,7 @@ public class QuadraticSpacePerfectHashing<AnyType>
 			if (items[i] != null)
 				result.append( "( "  + getKey(items[i]) + ", " + items[i] + "), ");
 		}
-		result.setCharAt(result.length()- 2, '.');
+		result.setCharAt(result.length()- 2, '.'); /* pour remplace la derniere virgule par un point*/
 		return result.toString();
 	}
 

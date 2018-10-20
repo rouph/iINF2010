@@ -5,18 +5,19 @@ public class SubsetHashing {
     /* Return true si Tab2 [] est un sous-ensemble de Tab1 [] */
 	static boolean isSubset(int Tab1[], int Tab2[], int m, int n)
     {
-        // compléter
+        if (m == 0 || n == 0 || n > m)
+            return false;
         HashSet<Integer> table1 = new HashSet<Integer>(m);
 
         // Adding elements into HashSet usind add()
-       for (int i = 0; i < m; i++)
+       for (int i : Tab1)
         {
-            table1.add(Tab1[i]);
+            table1.add(i);
         }
 
-        for (int j = 0; j < n; j++)
+        for (int j : Tab2 )
         {
-            if (!table1.contains(Tab2[j]))      //add a counter pour pa mettre !...
+            if (!table1.contains(j))
                return false;
         }
         return true;
@@ -25,7 +26,7 @@ public class SubsetHashing {
     public static void main(String[] args) 
     { 
         int T1[] = {5, 11, 12, 1, 10, 3, 7};
-        int T2[] = {11, 1, 10};
+        int T2[] = {11, 1, 3};
         int m = T1.length;
         int n = T2.length;
      

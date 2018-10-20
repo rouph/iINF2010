@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f7e479f-ffd1-4aae-9bed-e878ddc6bd5c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HashFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/HashFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinearSpacePerfectHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinearSpacePerfectHashing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuadraticSpacePerfectHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuadraticSpacePerfectHashing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/INF2010_TP02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INF2010_TP02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/INF2010_TP02/LinearSpacePerfectHashing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INF2010_TP02/LinearSpacePerfectHashing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/INF2010_TP02/QuadraticSpacePerfectHashing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INF2010_TP02/QuadraticSpacePerfectHashing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subset.java" beforeDir="false" afterPath="$PROJECT_DIR$/Subset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SubsetHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/SubsetHashing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/INF2010_TP02/Subset.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/INF2010_TP02/Subset.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,12 +53,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="610" />
+          <entry key="java" value="829" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="610" />
+          <entry key="JAVA" value="829" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -71,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HashFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="113" column="7" lean-forward="true" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
+            <state relative-caret-position="19">
+              <caret line="97" column="40" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="40" />
               <folding>
                 <element signature="e#5156#5165#0" expanded="true" />
               </folding>
@@ -80,11 +87,32 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SubsetHashing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding>
+                <element signature="e#258#267#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Subset.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuadraticSpacePerfectHashing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="101" column="48" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="48" />
+            <state relative-caret-position="461">
+              <caret line="101" column="100" selection-start-line="101" selection-start-column="100" selection-end-line="101" selection-end-column="100" />
             </state>
           </provider>
         </entry>
@@ -109,6 +137,8 @@
         <option value="$PROJECT_DIR$/LinearSpacePerfectHashing.java" />
         <option value="$PROJECT_DIR$/HashFunctions.java" />
         <option value="$PROJECT_DIR$/QuadraticSpacePerfectHashing.java" />
+        <option value="$PROJECT_DIR$/SubsetHashing.java" />
+        <option value="$PROJECT_DIR$/Subset.java" />
       </list>
     </option>
   </component>
@@ -124,7 +154,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539177073204" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540074386950" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
@@ -143,7 +173,7 @@
   </component>
   <component name="RunManager">
     <configuration name="tp2" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="HashFunctions" />
+      <option name="MAIN_CLASS_NAME" value="Subset" />
       <module name="INF2010_TP02" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,7 +216,7 @@
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.14566284" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.2405892" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41571194" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -251,13 +281,10 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk/jre/lib/rt.jar!/java/util/ArrayList.class" />
-    <entry file="file://$PROJECT_DIR$/HashFunctions.java">
+    <entry file="file://$PROJECT_DIR$/QuadraticSpacePerfectHashing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="113" column="7" lean-forward="true" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
-          <folding>
-            <element signature="e#5156#5165#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="461">
+          <caret line="101" column="100" selection-start-line="101" selection-start-column="100" selection-end-line="101" selection-end-column="100" />
         </state>
       </provider>
     </entry>
@@ -268,10 +295,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QuadraticSpacePerfectHashing.java">
+    <entry file="file://$PROJECT_DIR$/HashFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="101" column="48" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="48" />
+        <state relative-caret-position="19">
+          <caret line="97" column="40" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="40" />
+          <folding>
+            <element signature="e#5156#5165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SubsetHashing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="e#258#267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Subset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
         </state>
       </provider>
     </entry>
