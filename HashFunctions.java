@@ -95,8 +95,9 @@ public class HashFunctions
             
       for(int i=0, nbElements = 10; i<40; ++i, nbElements += 10)
       {
-         pfhash.SetArray( randomIntegers( nbElements ) );
+         pfhash.SetArray( randomIntegers( 46000 ) );
          System.out.println( nbElements + "\t" + pfhash.Size() );
+         System.out.println(pfhash.toString());
       }
    }
    
@@ -106,11 +107,14 @@ public class HashFunctions
    public static ArrayList<Integer> randomIntegers(int length)
    {
       Random generator = new Random( System.nanoTime() );
-      ArrayList<Integer> result = new ArrayList<Integer>();
+      ArrayList<Integer> result = new ArrayList<>();
+      int i = 0;
+
       while( result.size() < length){
-         int i=generator.nextInt(p);
-         if(!result.contains(i))
+         if(!result.contains(i)) {
             result.add(i);
+         }
+         i++;
       }
       return result;
    }

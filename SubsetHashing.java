@@ -7,7 +7,7 @@ public class SubsetHashing {
     {
         if (m == 0 || n == 0 || n > m)
             return false;
-        HashSet<Integer> table1 = new HashSet<Integer>(m);
+        HashSet<Integer> table1 = new HashSet<>(m);
 
         // Adding elements into HashSet usind add()
        for (int i : Tab1)
